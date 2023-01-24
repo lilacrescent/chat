@@ -1,0 +1,16 @@
+{
+    "css": {
+        "bulma": "https://bulma.io",
+        "semantic-UI": "https://semantic-ui.com",
+        "Bootstrap": "https://getbootstrap.jp",
+        "Foundation": "https://get.foundation/sites/docs-v5/css.html",
+        "Material-UI": "https://mui.com/material-ui"
+    },
+    "js": {
+        "jquery": "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js",
+        "firebase": [
+            "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js",
+            "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js"
+        ]
+    }
+}
