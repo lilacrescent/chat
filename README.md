@@ -1,2 +1,2 @@
 # TChat
- <a href="">BlueMeMond</a>(ベータ版)--># tchat
+ <a href="https://ybluemond.github.io/tchat/">tchat</a>(ベータ版)# tchat
