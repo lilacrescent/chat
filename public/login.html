@@ -16,6 +16,7 @@
                 <label>パスワード</label>
                 <input id="password" type="password">
             </div>
+            <button id="register_btn" type="submit">登録</button>
         </form>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -39,6 +40,8 @@
 
         document.getElementById("register_btn").addEventListener("click", registerUser);
         
+        // register
+
         const registerUser = function () {
             const $email = document.getElementById("email");
             const $password = document.getElementById("passwod");
@@ -52,6 +55,21 @@
                     console.log(error.code);
                 });
         }
+
+
+        // login
+
+        const loginUser = function () {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            signInWithEmailAndPassword(getAuth(), email, password)
+                .then((userCredential) => {
+
+                })
+                .catch(() => {
+
+                });        }
+
 
 
         const app = initializeApp(firebaseConfig);
