@@ -1,0 +1,35 @@
+[debug] [2023-01-30T05:22:02.392Z] ----------------------------------------------------------------------
+[debug] [2023-01-30T05:22:02.394Z] Command:       /usr/local/nvm/versions/node/v18.12.1/bin/node /usr/local/nvm/versions/node/v18.12.1/bin/firebase serve
+[debug] [2023-01-30T05:22:02.395Z] CLI Version:   11.20.0
+[debug] [2023-01-30T05:22:02.395Z] Platform:      linux
+[debug] [2023-01-30T05:22:02.395Z] Node Version:  v18.12.1
+[debug] [2023-01-30T05:22:02.396Z] Time:          Mon Jan 30 2023 05:22:02 GMT+0000 (Coordinated Universal Time)
+[debug] [2023-01-30T05:22:02.396Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-30T05:22:02.486Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-30T05:22:02.486Z] > authorizing via signed-in user (trrd4480@gmail.com)
+[debug] [2023-01-30T05:22:02.486Z] [iam] checking project bluemont1 for permissions ["firebase.projects.get"]
+[debug] [2023-01-30T05:22:02.489Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bluemont1:testIamPermissions [none]
+[debug] [2023-01-30T05:22:02.489Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/bluemont1:testIamPermissions x-goog-quota-user=projects/bluemont1
+[debug] [2023-01-30T05:22:02.489Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bluemont1:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-01-30T05:22:02.830Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/bluemont1:testIamPermissions 200
+[debug] [2023-01-30T05:22:02.831Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bluemont1:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-01-30T05:22:02.833Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bluemont1 [none]
+[debug] [2023-01-30T05:22:03.067Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bluemont1 200
+[debug] [2023-01-30T05:22:03.067Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bluemont1 {"projectId":"bluemont1","projectNumber":"425982303799","displayName":"bluemont","name":"projects/bluemont1","resources":{"hostingSite":"bluemont1","realtimeDatabaseInstance":"bluemont1-default-rtdb","storageBucket":"bluemont1.appspot.com","locationId":"asia-northeast2"},"state":"ACTIVE","etag":"1_35499509-05ae-4e6e-ad9b-b9e7f855db26"}
+[info] 
+[info] === Serving from '/home/trrd4480/dev/tchat'...
+[info] 
+[debug] [2023-01-30T05:22:03.070Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/bluemont1/sites 
+[debug] [2023-01-30T05:22:03.629Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/bluemont1/sites 200
+[debug] [2023-01-30T05:22:03.630Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/bluemont1/sites {"sites":[{"name":"projects/bluemont1/sites/bluemont1","defaultUrl":"https://bluemont1.web.app","appId":"1:425982303799:web:318898d93f05d26dc269b2","type":"DEFAULT_SITE"}]}
+[debug] [2023-01-30T05:22:03.630Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bluemont1/webApps/1:425982303799:web:318898d93f05d26dc269b2/config [none]
+[debug] [2023-01-30T05:22:04.710Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bluemont1/webApps/1:425982303799:web:318898d93f05d26dc269b2/config 200
+[debug] [2023-01-30T05:22:04.711Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bluemont1/webApps/1:425982303799:web:318898d93f05d26dc269b2/config {"projectId":"bluemont1","appId":"1:425982303799:web:318898d93f05d26dc269b2","databaseURL":"https://bluemont1-default-rtdb.firebaseio.com","storageBucket":"bluemont1.appspot.com","locationId":"asia-northeast2","apiKey":"AIzaSyCGarjG35PefnhSoc9bQX5gtJTAJ5idkuU","authDomain":"bluemont1.firebaseapp.com","messagingSenderId":"425982303799","measurementId":"G-X63YEFT5TW"}
+[debug] [2023-01-30T05:22:04.721Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bluemont1 [none]
+[debug] [2023-01-30T05:22:04.939Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bluemont1 200
+[debug] [2023-01-30T05:22:04.940Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bluemont1 {"projectId":"bluemont1","projectNumber":"425982303799","displayName":"bluemont","name":"projects/bluemont1","resources":{"hostingSite":"bluemont1","realtimeDatabaseInstance":"bluemont1-default-rtdb","storageBucket":"bluemont1.appspot.com","locationId":"asia-northeast2"},"state":"ACTIVE","etag":"1_35499509-05ae-4e6e-ad9b-b9e7f855db26"}
+[info] i  hosting[bluemont1]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[bluemont1]: Local server: http://localhost:5002 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5002\u001b[22m\u001b[24m"}}
+[info] i  hosting: 127.0.0.1 - - [30/Jan/2023:05:22:09 +0000] "GET /?authuser=0 HTTP/1.1" 200 - "https://shell.cloud.google.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [30/Jan/2023:05:22:09 +0000] \"GET /?authuser=0 HTTP/1.1\" 200 - \"https://shell.cloud.google.com/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Safari/605.1.15\""}}
+[info] i  hosting: 127.0.0.1 - - [30/Jan/2023:05:22:40 +0000] "GET /? HTTP/1.1" 200 - "https://5002-cs-717121700655-default.cs-asia-east1-jnrc.cloudshell.dev/?authuser=0" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [30/Jan/2023:05:22:40 +0000] \"GET /? HTTP/1.1\" 200 - \"https://5002-cs-717121700655-default.cs-asia-east1-jnrc.cloudshell.dev/?authuser=0\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Safari/605.1.15\""}}
