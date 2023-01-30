@@ -7,7 +7,7 @@
     </head>
     <body>
 
-        <form>
+        <!-- <form>
             <div>
                 <label>メールアドレス</label>
                 <input id="email" type="email">
@@ -17,7 +17,7 @@
                 <input id="password" type="password">
             </div>
             <button id="register_btn" type="submit">登録</button>
-        </form>
+        </form> -->
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script type="module">
@@ -38,37 +38,37 @@
             measurementId: "G-LFZXW33JVL"
         };
 
-        document.getElementById("register_btn").addEventListener("click", registerUser);
+        // document.getElementById("register_btn").addEventListener("click", registerUser);
         
-        // register
+        // // register
 
-        const registerUser = function () {
-            const $email = document.getElementById("email");
-            const $password = document.getElementById("passwod");
-            const email = $email.value;
-            const password = $password.value;
-            createUserWithEmailAndPassword(getAuth(), email, password)
-                .then((userCredential) => {
+        // const registerUser = function () {
+        //     const $email = document.getElementById("email");
+        //     const $password = document.getElementById("passwod");
+        //     const email = $email.value;
+        //     const password = $password.value;
+        //     createUserWithEmailAndPassword(getAuth(), email, password)
+        //         .then((userCredential) => {
 
-                })
-                .catch((error) => {
-                    console.log(error.code);
-                });
-        }
+        //         })
+        //         .catch((error) => {
+        //             console.log(error.code);
+        //         });
+        // }
 
 
-        // login
+        // // login
 
-        const loginUser = function () {
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-            signInWithEmailAndPassword(getAuth(), email, password)
-                .then((userCredential) => {
+        // const loginUser = function () {
+        //     const email = document.getElementById("email").value;
+        //     const password = document.getElementById("password").value;
+        //     signInWithEmailAndPassword(getAuth(), email, password)
+        //         .then((userCredential) => {
 
-                })
-                .catch(() => {
+        //         })
+        //         .catch(() => {
 
-                });        }
+        //         });        }
 
 
 
