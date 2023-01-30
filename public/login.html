@@ -1,40 +1,18 @@
-
 <!DOCTYPE html>
-<html lang="ja">
+<html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>TChat</title>
+        <meta charset="utf-8">
+        <title>Admin Login</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
     <body>
-        <!-- コンテンツ表示画面 -->
-        <!-- <p>新バージョンがリリースされました。新しいバージョンでは、細かな更新がすぐに反映されます。</p> -->
-        <div id="notfication"></div>
-        <div>
-            <form>
-                <div class="form-group">
-                    <label>名前</label>
-                    <input type="text" id="uname" class="form-control" placeholder="名前">
-                </div>
-                <br>
-                <div class="form-group">
-                    <label>本文</label>
-                    <textarea id="text" cols="30" rows="10" class="form-control"></textarea><br>
-                    <button id="send" class="btn btn-primary btn-lg">送信</button>
-                </div>
-            </form>
-            <noscript><p>このアプリはJavaScriptを使用しています。<br>ブラウザの設定でJavascriptを有効にしてください。</p></noscript>
-            <p>output</p>
-            <div id="output" class="output" style="overflow: auto;height: 300px;"></div>
-        </div>
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
         import { getDatabase, ref, push, set, onChildAdded, remove, onChildRemoved } 
         from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js"
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
             apiKey: "AIzaSyAv2pC3rhqDDTGxOMSOj3haGjvNH5zILAk",
@@ -46,8 +24,11 @@
             appId: "1:548956595822:web:52cf473c82b23fe649687f",
             measurementId: "G-LFZXW33JVL"
         };
-        </script>
-        <script>
+
+        
+
+
+
         const app = initializeApp(firebaseConfig);
         const db  = getDatabase(app); //RealtimeDBに接続
         const dbRef = ref(db,"tchat/chat/room1"); //RealtimeDB内の"chat"を使う
