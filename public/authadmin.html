@@ -9,6 +9,36 @@
         <p>Admin機能を利用するにはログインしてください</p>
         <script>
             import { getAuth, createUserWithEmailAndPassword, applyActionCode } from "firebase/auth"
+
+            async signup(email, password) {
+                try {
+                    const auth = getAuth()
+                    const userCredencial = await createUserWithEmailAndPassword(email, password)
+                    await userCredencial.user.sendEmailVerification()
+                    return
+                } catch (error) {
+                    switch (error.code) {
+                        case "auth/email-already-in-use":
+                            break
+                        default:
+                    }
+                }
+            }
+            async verifyEmail(oobCode) {
+                try {
+                    const auth = getAuth()
+                    await applyActionCode(auth, oobCode)
+                    return
+                } catch (error) {
+                    switch(error.code) {
+                        case "auth/expired-action-code":
+                            break
+                        case "auth/invalid-action-code":
+                            break
+                        default:                            
+                    }
+                }
+            }
         </script>
     </body>
 </html>
