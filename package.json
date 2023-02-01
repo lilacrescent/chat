@@ -1,5 +1,32 @@
 {
   "dependencies": {
-    "firebase": "^9.16.0"
-  }
+    "firebase": "^9.16.0",
+    "firebase-admin": "^11.5.0"
+  },
+  "name": "tchat",
+  "description": "<a href=\"https://ybluemond.github.io/tchat/\">tchat</a>(ベータ版)# tchat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YBlueMond/tchat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YBlueMond/tchat/issues"
+  },
+  "homepage": "https://github.com/YBlueMond/tchat#readme"
 }
