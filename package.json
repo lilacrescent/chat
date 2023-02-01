@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "firebase": "^9.16.0",
-    "firebase-admin": "^11.5.0"
+    "firebase-admin": "^11.5.0",
+    "gh": "^2.8.9"
   },
   "name": "tchat",
   "description": "<a href=\"https://ybluemond.github.io/tchat/\">tchat</a>(ベータ版)# tchat",
