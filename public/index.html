@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>TChat</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="js/gettime.js"></script>
     </head>
     <body>
         <!-- コンテンツ表示画面 -->
@@ -36,28 +37,32 @@
         from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
-            apiKey: "AIzaSyAv2pC3rhqDDTGxOMSOj3haGjvNH5zILAk",
-            authDomain: "ybluemond.firebaseapp.com",
-            databaseURL: "https://ybluemond-default-rtdb.asia-southeast1.firebasedatabase.app",
-            projectId: "ybluemond",
-            storageBucket: "ybluemond.appspot.com",
-            messagingSenderId: "548956595822",
-            appId: "1:548956595822:web:52cf473c82b23fe649687f",
-            measurementId: "G-LFZXW33JVL"
+        apiKey: "AIzaSyCGarjG35PefnhSoc9bQX5gtJTAJ5idkuU",
+        authDomain: "bluemont1.firebaseapp.com",
+        databaseURL: "https://bluemont1-default-rtdb.firebaseio.com",
+        projectId: "bluemont1",
+        storageBucket: "bluemont1.appspot.com",
+        messagingSenderId: "425982303799",
+        appId: "1:425982303799:web:318898d93f05d26dc269b2",
+        measurementId: "G-X63YEFT5TW"
         };
+
+        // initialize database
         const app = initializeApp(firebaseConfig);
         const db  = getDatabase(app); //RealtimeDBに接続
         const dbRef = ref(db,"tchat/chat/room1"); //RealtimeDB内の"chat"を使う
 
-        //データ登録(Click)
+        //データ登録
         $("#send").on("click",function() {
+            const time = gettime();
             const msg = {
+                time: time,
                 uname: $("#uname").val(),
                 text: $("#text").val()
             }
             const newPostRef = push(dbRef); //ユニークKEYを生成
             set(newPostRef, msg);           //"chat"にユニークKEYをつけてオブジェクトデータを登録
-            alert("submit")
+            // alert("submit");
         });
 
         //最初にデータ取得＆onSnapshotでリアルタイムにデータを取得
