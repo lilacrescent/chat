@@ -1,0 +1,11 @@
+{
+  "rules": {
+    "tchat": {
+      ".read": true,
+      ".write": "auth == 'vvZ8uOD1ebZ07enV7I7kRRJ6U872'",
+      "chat": {
+        ".write": true
+      }
+    }
+  }
+}
