@@ -1,6 +1,0 @@
-05:00:06.949 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
-05:00:07.506 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
-05:00:10.824 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - bluemont1-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 330ms, init: 0ms
-05:00:11.032 [NamespaceSystem-blocking-namespace-operation-dispatcher-6] INFO com.firebase.core.namespace.StateManager - Namespace bluemont1-default-rtdb status Active to Active
-06:22:09.235 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
-06:22:09.356 [NamespaceSystem-akka.actor.default-dispatcher-11] INFO com.firebase.core.namespace.Terminator$Terminator - 1 actors left to terminate: bluemont1-default-rtdb
