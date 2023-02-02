@@ -61,9 +61,3 @@ node_modules/
 
 # Yarn Integrity file
 .yarn-integrity
-
-# dotenv environment variables file
-.env
-
-# don't commit anywhere
-.admin/
