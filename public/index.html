@@ -10,8 +10,8 @@
     </head>
     <body>
         <!-- コンテンツ表示画面 -->
-        <a href="login/login.html"><button class="btn btn-danger">Login</button></a>
-        <a href="beta/html"><button class="btn btn-large">Beta</button></a>
+        <!-- <a href="login/login.html"><button class="btn btn-danger">Login</button></a> -->
+        <!-- <a href="beta/html"><button class="btn btn-large">Beta</button></a> -->
         <div>
             <form>
                 <div class="form-group">
@@ -55,9 +55,9 @@
 
         //データ登録
         $("#send").on("click",function() {
-            const time = gettime();
+            // const time = gettime();
             const msg = {
-                time: time,
+                // time: time,
                 uname: $("#uname").val(),
                 text: $("#text").val()
             }
@@ -76,7 +76,7 @@
                 h += '<br>';
                 h += msg.text;
                 h += '</p>';
-            $("#output").append(h); //#outputの最後に追加
+            $("#output").prepend(h); //#outputの最後に追加
         });
         </script>
     </body>
