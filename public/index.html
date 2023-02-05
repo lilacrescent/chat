@@ -56,14 +56,18 @@
         //データ登録
         $("#send").on("click",function() {
             // const time = gettime();
-            const msg = {
-                // time: time,
-                uname: $("#uname").val(),
-                text: $("#text").val()
+            const uname = $("#uname").val()
+            const text = $("#text").val()
+            if(uname !== null && text !== null) {
+                const msg = {
+                    // time: time,
+                    uname: uname,
+                    text: text
+                }
+                const newPostRef = push(dbRef); //ユニークKEYを生成
+                set(newPostRef, msg);           //"chat"にユニークKEYをつけてオブジェクトデータを登録
+                // alert("submit");
             }
-            const newPostRef = push(dbRef); //ユニークKEYを生成
-            set(newPostRef, msg);           //"chat"にユニークKEYをつけてオブジェクトデータを登録
-            // alert("submit");
         });
 
         //最初にデータ取得＆onSnapshotでリアルタイムにデータを取得
